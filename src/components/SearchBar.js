@@ -16,6 +16,7 @@ import StarsIcon from "@material-ui/icons/Stars";
 import AllInclusiveIcon from "@material-ui/icons/AllInclusive";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
+import CancelIcon from "@material-ui/icons/Cancel";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -68,7 +69,7 @@ const useStyles = makeStyles((theme) => ({
 //   },
 // }))(MenuItem);
 
-const SearchBar = (props) => {
+const SearchBar = ({ search, setSearch }) => {
   const classes = useStyles();
 
   // const [anchorEl, setAnchorEl] = useState(null);
@@ -139,13 +140,16 @@ const SearchBar = (props) => {
       <InputBase
         className={classes.input}
         placeholder="Search GIPHY.COM"
+        value={search}
         inputProps={{ "aria-label": "search giphy.com" }}
+        onChange={(event) => setSearch(event.target.value)}
       />
-      <IconButton
-        type="submit"
-        className={classes.iconButton}
-        aria-label="search"
-      >
+      {search && (
+        <IconButton aria-label="clear" onClick={() => setSearch("")}>
+          <CancelIcon />
+        </IconButton>
+      )}
+      <IconButton className={classes.iconButton} aria-label="search">
         <SearchIcon />
       </IconButton>
       {/* <Divider className={classes.divider} orientation="vertical" /> */}

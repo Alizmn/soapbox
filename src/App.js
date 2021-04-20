@@ -8,14 +8,15 @@ import "./App.css";
 
 const App = () => {
   const [status, setStatus] = useState("Trending");
+  const [search, setSearch] = useState("");
   return (
     <div className="App">
       <NavBar />
       <div className="searchBar">
-        <SearchBar />
+        <SearchBar search={search} setSearch={setSearch} />
       </div>
-      <Section setStatus={setStatus} />
-      <Gighy status={status} />
+      <Section setStatus={setStatus} setSearch={setSearch} />
+      <Gighy status={status} search={search} />
     </div>
   );
 };

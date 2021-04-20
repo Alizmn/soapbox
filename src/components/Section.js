@@ -27,14 +27,19 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Section = ({ setStatus }) => {
+const Section = ({ setStatus, setSearch }) => {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
       <div className={classes.container}>
         <div className={classes.container}>
-          <IconButton onClick={() => setStatus("Trending")}>
+          <IconButton
+            onClick={() => {
+              setStatus("Trending");
+              setSearch("");
+            }}
+          >
             <WhatshotIcon className={classes.trend} />
             <Typography color="textSecondary" variant="subtitle2">
               Trending

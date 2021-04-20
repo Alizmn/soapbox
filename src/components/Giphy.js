@@ -11,7 +11,7 @@ import GifCard from "./GifCard";
 // use @giphy/js-fetch-api to fetch gifs, instantiate with api key
 const giphyFetch = new GiphyFetch("rigshM5l1AUPQMqbPHTgetg54n62pCCj");
 
-const Giphy = ({ status }) => {
+const Giphy = ({ status, search }) => {
   const [gifs, setGifs] = useState([]);
   const [favs, setFavs] = useState([]);
   const [likes, setLikes] = useState([]);
@@ -24,9 +24,15 @@ const Giphy = ({ status }) => {
     breakpointColumnsObj[i] = i / gifWidth - 1;
   }
 
-  const fetchGifs = (offset) =>
-    giphyFetch.trending({ offset, limit: gifNumber });
-  fetchGifs().then((gifs) => setGifs(gifs.data));
+  if (search.length > 0) {
+    const fetchGifs = (offset) =>
+      giphyFetch.search(search, { offset, limit: gifNumber });
+    fetchGifs().then((gifs) => setGifs(gifs.data));
+  } else {
+    const fetchGifs = (offset) =>
+      giphyFetch.trending({ offset, limit: gifNumber });
+    fetchGifs().then((gifs) => setGifs(gifs.data));
+  }
 
   // console.log(gifs);
 
