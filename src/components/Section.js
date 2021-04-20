@@ -1,10 +1,7 @@
-import Divider from "@material-ui/core/Divider";
-import Typography from "@material-ui/core/Typography";
-import { makeStyles } from "@material-ui/core/styles";
+import { Divider, Typography, makeStyles, IconButton } from "@material-ui/core";
 import WhatshotIcon from "@material-ui/icons/Whatshot";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import StarsIcon from "@material-ui/icons/Stars";
-import IconButton from "@material-ui/core/IconButton";
 
 const useStyles = makeStyles((theme) => ({
   root: {

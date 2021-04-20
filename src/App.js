@@ -8,6 +8,7 @@ import "./App.css";
 
 const App = () => {
   const [status, setStatus] = useState("Trending");
+  //  ^-----status includes: Trending, Search, Liked ones and Favorites
   const [search, setSearch] = useState("");
 
   useEffect(() => {
@@ -16,7 +17,9 @@ const App = () => {
 
   return (
     <div className="App">
-      <NavBar />
+      <div style={{ zIndex: 5 }}>
+        <NavBar />
+      </div>
       <div className="searchBar">
         <SearchBar search={search} setSearch={setSearch} />
       </div>
