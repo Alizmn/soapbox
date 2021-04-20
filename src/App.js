@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Gighy from "./components/Giphy";
 import NavBar from "./components/NavBar";
 import SearchBar from "./components/SearchBar";
@@ -9,6 +9,11 @@ import "./App.css";
 const App = () => {
   const [status, setStatus] = useState("Trending");
   const [search, setSearch] = useState("");
+
+  useEffect(() => {
+    if (search.length > 0) setStatus("Search");
+  }, [search]);
+
   return (
     <div className="App">
       <NavBar />

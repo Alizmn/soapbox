@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import InputBase from "@material-ui/core/InputBase";
@@ -69,7 +69,7 @@ const useStyles = makeStyles((theme) => ({
 //   },
 // }))(MenuItem);
 
-const SearchBar = ({ search, setSearch }) => {
+const SearchBar = ({ search, setSearch, setStatus }) => {
   const classes = useStyles();
 
   // const [anchorEl, setAnchorEl] = useState(null);

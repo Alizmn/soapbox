@@ -30,16 +30,16 @@ const useStyles = makeStyles((theme) => ({
 const Section = ({ setStatus, setSearch }) => {
   const classes = useStyles();
 
+  const handleClick = (stat) => {
+    setStatus(stat);
+    setSearch("");
+  };
+
   return (
     <div className={classes.root}>
       <div className={classes.container}>
         <div className={classes.container}>
-          <IconButton
-            onClick={() => {
-              setStatus("Trending");
-              setSearch("");
-            }}
-          >
+          <IconButton onClick={() => handleClick("Trending")}>
             <WhatshotIcon className={classes.trend} />
             <Typography color="textSecondary" variant="subtitle2">
               Trending
@@ -47,7 +47,7 @@ const Section = ({ setStatus, setSearch }) => {
           </IconButton>
         </div>
         <div className={classes.container}>
-          <IconButton onClick={() => setStatus("Favorites")}>
+          <IconButton onClick={() => handleClick("Favorites")}>
             <StarsIcon className={classes.fav} />
             <Typography color="textSecondary" variant="subtitle2">
               Favorites
@@ -55,7 +55,7 @@ const Section = ({ setStatus, setSearch }) => {
           </IconButton>
         </div>
         <div className={classes.container}>
-          <IconButton onClick={() => setStatus("Likes")}>
+          <IconButton onClick={() => handleClick("Likes")}>
             <FavoriteIcon className={classes.like} />
             <Typography color="textSecondary" variant="subtitle2">
               Likes
