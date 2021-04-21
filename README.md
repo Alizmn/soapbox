@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+# GIPHY MOCK
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is an assesment for SoapBox. This assignment includes a website that potentially reveals trending gifs.
 
-## Available Scripts
+## TECH STACKS
 
-In the project directory, you can run:
+- Node.js
+- React
+- Jest
 
-### `npm start`
+## SETUP
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### PREREQUISITE
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Node.js<br/>
+  More [info](https://nodejs.org/en/) for installation.
+- Api key from GIPHY
+  More [info](https://developers.giphy.com/) on how to get it.
 
-### `npm test`
+### INITIALIZATION
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Download the project and `cd soapbox`
+- Install dependencies by `npm install`
+- Copy the `.env.example` and rename it to `.env` or run the code below in the project root:
 
-### `npm run build`
+```sh
+cp .env.example .env
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Be carefull to add `.env` to the `.gitignore` file
+- Enter the GIPHY api key into `.env` file and save it!
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### START
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- To run the app `npm start`
+  !["Screenshot of main page"](https://github.com/alizmn/soapbox/blob/master/images/mainPage.png?raw=true)
 
-### `npm run eject`
+### TEST
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- To run the test enter `npm test`.
+  !["Screenshot of tests"](https://github.com/alizmn/soapbox/blob/master/images/tests.png?raw=true)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## FEATURES
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+✔️ Costumized Infinit scroll </br>
+✔️ Like and favorite tabs</br>
+✔️ Search new gif</br>
+✔️ Unit tests</br>
