@@ -14,7 +14,7 @@ This is an assesment for SoapBox. This assignment includes a website that potent
 
 - Node.js<br/>
   More [info](https://nodejs.org/en/) for installation.
-- Api key from GIPHY
+- Api key from GIPHY<br/>
   More [info](https://developers.giphy.com/) on how to get it.
 
 ### INITIALIZATION
